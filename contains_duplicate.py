@@ -52,7 +52,14 @@ print(result)
 
 """
 
+def contains_duplicate(nums):
+    n = len(nums)
+    for i in range(n):             # Outer loop iterates over each element
+        for j in range(i + 1, n):  # Inner loop iterates over elements after the i-th element
+            if nums[i] == nums[j]: # Compare the i-th element with the j-th element
+                return True        # Return True if a duplicate is found
+    return False    
 
     
-
+# This solution has a time complexity of 𝑂(𝑛2)O (n 2 ), where 𝑛n is the length of the array, making it a brute force approach.
 
